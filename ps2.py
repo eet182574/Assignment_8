@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
             if turn == 1:
 
-                print "Player 1’s chance"
+                print "Player 1s chance"
 
                 P_N = raw_input("Enter the position and number to be entered:")
 
@@ -82,14 +82,15 @@ if __name__ == "__main__":
 
                 if winner_test(matrix):
                     print "Player 1 is winner"
-                    exit()
+                    char = raw_input("Do you want to continue")
+                    break                    
 
                 turn = 2
 
 
             else:
 
-                print "Player 2’s chance"
+                print "Player 2s chance"
 
                 P_N = raw_input("Enter the position and number to be entered:")
 
@@ -99,9 +100,6 @@ if __name__ == "__main__":
 
                 Number = int(P_N[1])
 
-                print Position
-
-                print Number
 
                 #Check for constrains for Player 1
                 if (Position < 0  or Position >9):
@@ -131,7 +129,8 @@ if __name__ == "__main__":
 
                 if winner_test(matrix):
                     print "Player 2 is winner"
-                    exit()
+                    char = raw_input("Do you want to continue")
+                    break                    
 
             if count == 9:
                 print "Game Draw"
